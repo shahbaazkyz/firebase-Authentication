@@ -22,7 +22,7 @@ export function AuthProvider({ children }) {
   }
 
   function gitLogin() {
-    return  auth.signInWithPopup(auth,githubAuth)
+    return  auth.signInWithPopup(githubAuth)
   }
 
 

@@ -32,7 +32,8 @@ export default function Login() {
     try {
       await gitLogin(provider)
       history.push("/")
-    } catch  {
+    } catch (error) {
+      console.log(error);
       setError("Failed to log in")
     }
   }
