@@ -11,7 +11,6 @@ export default function Dashboard() {
   let userName =
     "https://edent.github.io/github_id/#" + currentUser.providerData[0].uid;
   console.log(userName);
-  const [uName, setUName] = useState(userName);
 
   async function handleLogout() {
     setError("");
@@ -45,20 +44,22 @@ export default function Dashboard() {
               href={userName}
               style={{ textDecoration: "none", color: "white" }}
               target="_blank"
+              rel="noopener noreferrer"
             >
               <Button className="w-100 button button--social-login button--github mt-3">
                 <i className="icon fa fa-github"></i> Go to Profile
               </Button>
             </a>
           ) : (
-               <a
+            <a
               href="https://github.com"
               style={{ textDecoration: "none", color: "white" }}
               target="_blank"
+              rel="noopener noreferrer"
             >
-            <Button className="w-100 button button--social-login button--github mt-3">
-              <i className="icon fa fa-github"></i> Go to Github
-            </Button>
+              <Button className="w-100 button button--social-login button--github mt-3">
+                <i className="icon fa fa-github"></i> Go to Github
+              </Button>
             </a>
           )}
           {currentUser.providerData[0].providerId === "github.com" ? (
